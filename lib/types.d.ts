@@ -3,7 +3,7 @@ import React__default from 'react';
 
 type Prettify<T> = {
     [k in keyof T]: T[k];
-} & object;
+} & {};
 
 interface Props$3 {
     children: React.ReactNode;
