@@ -15,6 +15,11 @@ export default [
         format: 'cjs',
         sourcemap: true,
       },
+      {
+        file: packageJson.module,
+        format: 'esm',
+        sourcemap: true,
+      },
     ],
     plugins: [peerDepsExternal(), resolve(), commonjs(), typescript({ tsconfig: './tsconfig.json' }), terser()],
     external: ['react', 'react-dom'],
