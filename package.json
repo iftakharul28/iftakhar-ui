@@ -2,21 +2,20 @@
   "name": "react-iftakhar-ui",
   "version": "0.1.5",
   "description": "My first react typescript package",
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.esm.js",
-  "types": "lib/index.cjs.d.ts",
+  "main": "index.js",
   "author": "Iftakharul Alam",
   "license": "MIT",
+  "homepage": "https://github.com/iftakharul28/react-iftakhar-ui#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iftakharul28/react-iftakhar-ui.git"
   },
   "scripts": {
-    "build": "rollup -c --bundleConfigAsCjs"
+    "build": "tsc"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
-    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+    "react": ">=16",
+    "react-dom": ">=16"
   },
   "files": [
     "lib",
@@ -34,30 +33,12 @@
       "index.ts"
     ]
   },
-  "exports": {
-    ".": {
-      "module": "./lib/index.esm.js",
-      "import": "./lib/index.cjs.js",
-      "default": "./lib/index.cjs.js"
-    }
-  },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^24.0.1",
-    "@rollup/plugin-node-resolve": "^15.0.1",
-    "@rollup/plugin-terser": "^0.4.3",
-    "@rollup/plugin-typescript": "^11.0.0",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.1.0",
-    "rollup": "^3.28.1",
-    "rollup-plugin-dts": "^6.0.1",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "tslib": "^2.6.2",
+    "tsc-hooks": "^1.1.2",
     "typescript": "^5.2.2"
-  },
-  "homepage": "https://github.com/iftakharul28/react-iftakhar-ui#readme",
-  "dependencies": {
-    "@types/rollup-plugin-peer-deps-external": "^2.2.1"
   }
 }

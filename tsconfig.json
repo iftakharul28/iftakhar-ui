@@ -1,22 +1,16 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "target": "es2015",
-    "strict": true,
-    "skipLibCheck": true,
+    "target": "ES6",
     "jsx": "react",
-    "module": "ESNext",
-    "declaration": true,
-    "declarationDir": "types",
-    "sourceMap": true,
-    "outDir": "lib",
+    "module": "CommonJS",
     "moduleResolution": "node",
-    "emitDeclarationOnly": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "allowJs": true,
+    "declaration": true,
+    "outDir": "./lib",
+    "esModuleInterop": true,
+    "strict": true,
+    "noImplicitAny": true
   },
-  "exclude": ["lib", "node_modules", "src/**/*.test.tsx", "src/**/*.stories.tsx"]
+  "exclude": ["node_modules"],
+  "include": ["src/", "src/**/*.module.css"]
 }
