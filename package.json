@@ -1,21 +1,15 @@
 {
-  "name": "react-iftakhar-ui",
-  "version": "0.1.5",
+  "name": "@iftakhar/ui",
+  "version": "0.0.1",
   "description": "My first react typescript package",
-  "main": "index.js",
-  "author": "Iftakharul Alam",
+  "main": "lib/cjs/index.js",
+  "types": "lib/cjs/index.d.ts",
+  "module": "lib/esm/index.js",
+  "author": "Iftakharul Alam  <iftakharul28@gmail.com> (https://iftakharul-alam.vercel.app)",
   "license": "MIT",
-  "homepage": "https://github.com/iftakharul28/react-iftakhar-ui#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iftakharul28/react-iftakhar-ui.git"
-  },
+  "homepage": "https://github.com/iftakharul28/iftakhar-ui#readme",
   "scripts": {
-    "build": "tsc"
-  },
-  "peerDependencies": {
-    "react": ">=16",
-    "react-dom": ">=16"
+    "build": "rollup -c --bundleConfigAsCjs"
   },
   "files": [
     "lib",
@@ -28,17 +22,29 @@
     "react-ui",
     "react-iftakhar-ui"
   ],
-  "preconstruct": {
-    "entrypoints": [
-      "index.ts"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iftakharul28/iftakhar-ui.git"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.4",
+    "@rollup/plugin-node-resolve": "^15.2.1",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
+    "postcss": "^8.4.29",
     "react": "^18.2.0",
-    "react-dom": "^18.1.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^3.28.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.35.0",
+    "style-loader": "^3.3.3",
     "tsc-hooks": "^1.1.2",
     "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
