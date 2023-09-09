@@ -1,6 +1,6 @@
 {
   "name": "@iftakhar/ui",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "My first react typescript package",
   "main": "lib/cjs/index.js",
   "types": "lib/cjs/index.d.ts",
