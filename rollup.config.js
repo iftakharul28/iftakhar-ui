@@ -1,4 +1,5 @@
 const resolve = require('@rollup/plugin-node-resolve');
+const terser = require('@rollup/plugin-terser');
 const commonjs = require('@rollup/plugin-commonjs');
 const typescript = require('rollup-plugin-typescript2');
 const postcss = require('rollup-plugin-postcss');
@@ -19,6 +20,7 @@ export default {
     },
   ],
   plugins: [
+    terser(),
     resolve(),
     commonjs(),
     typescript({ tsconfig: './tsconfig.json' }),

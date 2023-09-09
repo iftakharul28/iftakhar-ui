@@ -9,12 +9,13 @@ export interface TabsListProps extends Props {
     ariaLabel: string;
 }
 export interface TabsTriggerProps extends Props {
-    activeTab?: string;
     activeClass?: string;
     value: string;
-    onClick: (value: string) => void;
 }
 export interface TabsContentProps extends Props {
     value: string;
-    activeTab?: string;
+}
+export interface TabsContextType {
+    activeTab: string;
+    setActiveTab: React.Dispatch<React.SetStateAction<string>>;
 }

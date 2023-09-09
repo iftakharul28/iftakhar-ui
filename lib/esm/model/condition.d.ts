@@ -1,6 +1,6 @@
-export interface Props {
+export interface SwitchProps {
     children: React.ReactNode;
 }
-export interface CaseProps extends Props {
+export interface CaseProps extends SwitchProps {
     condition: boolean;
 }

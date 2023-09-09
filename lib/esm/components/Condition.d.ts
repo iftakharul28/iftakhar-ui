@@ -1,8 +1,8 @@
-import { CaseProps, Props } from '../model/condition';
+import { CaseProps, SwitchProps } from '../model/condition';
 export declare const Switch: {
-    (props: Props): null;
+    (props: SwitchProps): null;
     Case: (props: CaseProps) => import("react").ReactNode;
-    Default: (props: Props) => import("react").ReactNode;
+    Default: (props: SwitchProps) => import("react").ReactNode;
 };
 export declare const Case: (props: CaseProps) => import("react").ReactNode;
-export declare const Default: (props: Props) => import("react").ReactNode;
+export declare const Default: (props: SwitchProps) => import("react").ReactNode;
