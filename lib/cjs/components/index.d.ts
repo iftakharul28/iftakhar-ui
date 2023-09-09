@@ -6,6 +6,7 @@ export * from './List';
 export * from './Model';
 export * from './Select';
 export * from './Sidebar';
+export * from './Pagination';
 export * from './Tab';
 export * from './Table';
 export * from './Timeline';
