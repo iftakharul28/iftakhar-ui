@@ -3,8 +3,11 @@
 ## Install
 
 ```js
-npm i @iftakhar/ui
 yarn add @iftakhar/ui
+```
+
+```js
+npm i @iftakhar/ui
 ```
 
 ## Components
