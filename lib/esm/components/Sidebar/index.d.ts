@@ -7,7 +7,7 @@ interface ProSidebarProps {
     collapsed?: boolean;
     rtl?: boolean;
     toggled?: boolean;
-    image?: string;
+    bgImage?: string;
     breakPoint?: string;
     onToggle?: (toggled: boolean) => void;
     style?: React.CSSProperties;
@@ -20,7 +20,7 @@ interface SidebarState {
 }
 export declare const SidebarContext: React.Context<SidebarState>;
 export declare const Sidebar: {
-    ({ children, className, width, collapsedWidth, collapsed, rtl, toggled, image, breakPoint, onToggle, style, ref, ...rest }: ProSidebarProps): React.JSX.Element;
+    ({ children, className, width, collapsedWidth, collapsed, rtl, toggled, bgImage, breakPoint, onToggle, style, ref, ...rest }: ProSidebarProps): React.JSX.Element;
     Menu: React.FC<React.HTMLAttributes<HTMLElement> & {
         className?: string | undefined;
         children?: React.ReactNode;

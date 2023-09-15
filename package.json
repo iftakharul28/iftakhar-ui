@@ -19,8 +19,8 @@
   "keywords": [
     "react",
     "typescript",
-    "react-ui",
-    "react-iftakhar-ui"
+    "ui",
+    "@iftakhar/ui"
   ],
   "repository": {
     "type": "git",

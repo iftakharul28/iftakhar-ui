@@ -68,7 +68,7 @@ Breadcrumb:
 
 ```js
 import { Breadcrumb } from '@iftakhar/ui';
-<Breadcrumb separator={<ArrowDown className='-rotate-90 w-[15px] h-[15px]' />}>
+<Breadcrumb separator={'/'}>
   <Breadcrumb.Item>home</Breadcrumb.Item>
   <Breadcrumb.Item>product</Breadcrumb.Item>
   <Breadcrumb.Item>iphone-14-pro</Breadcrumb.Item>
@@ -81,13 +81,13 @@ Condition:
 import { Switch } from '@iftakhar/ui';
 <Switch>
   <Switch.Case condition={true}>
-    <span>new Order</span>
+    <span>If this condition is true, then it will show</span>
   </Switch.Case>
   <Switch.Case condition={false}>
-    <span>Pre Order</span>
+    <span>If this condition is false, then it will not show</span>
   </Switch.Case>
   <Switch.Default>
-    <span>Pre Order</span>
+    <span>If the other two conditions are false, then this will show</span>
   </Switch.Default>
 </Switch>;
 ```
@@ -197,7 +197,7 @@ Pagination
 ```js
 import { useState } from 'react';
 import { Pagination } from '@iftakhar/ui';
-const [page, setPage] = useState(1);
+const [page, setPage] = useState < number > 1;
 const handlePageChange = (value: number) => {
   setPage(value);
 };
