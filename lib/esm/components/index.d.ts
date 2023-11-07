@@ -13,3 +13,4 @@ export * from './Table';
 export * from './Timeline';
 export * from './Toast';
 export * from './Tooltip';
+export * from './MediaQuery';

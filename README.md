@@ -19,6 +19,7 @@ yarn add @iftakhar/ui
 - Input
 - List
 - Model
+- MediaQuery
 - Select
 - Sidebar
 - Pagination
@@ -133,17 +134,27 @@ Model:
 ```js
 import { useState } from 'react';
 import { Modal } from '@iftakhar/ui';
-const [isActive, setActive] = useState < boolean > false;
-
+const [isActive, setActive] = useState<boolean>(false);
 <Modal
   title={'Modal'}
   visible={isActive}
   maskClosable={false}
-  okButton={{ onClick: () => setActive(!isActive), type: 'button', className: 'ok btn', children: 'OK' }}
-  cancelButton={{ onClick: () => setActive(!isActive), type: 'button', className: 'ok btn', children: 'Close' }}
+  okButton={{ onClick: () => setActive(!isActive), type: 'button', className: '', children: 'OK' }}
+  cancelButton={{ onClick: () => setActive(!isActive), type: 'button', className: '', children: 'Close' }}
   className='!max-w-xl mx-auto !top-40'>
-  <div>Just do not learn physics at school and your life will be full of magic and miracles. Day before yesterday I saw a rabbit, and yesterday a deer, and today, you.</div>
+  <p>Modal dialogs.</p>
 </Modal>;
+```
+
+MediaQuery:
+
+```js
+<MediaQuery query='(min-width: 1024px)'>
+  <pre>min-width: 1024px</pre> {/* if screen width is bigger than 1024px then it will be shown */}
+</MediaQuery>
+<MediaQuery query='(max-width: 1024px)'>
+  <pre>max-width: 1024px</pre> {/* if screen width is smaller than 1024px then it will be shown */}
+</MediaQuery>
 ```
 
 Select:
@@ -151,7 +162,7 @@ Select:
 ```js
 import { useState } from 'react';
 import { Select } from '@iftakhar/ui';
-const [selectedOption, setSelectedOption] = (useState < string) | (null > null);
+const [selectedOption, setSelectedOption] = useState <string | null>(null);
 const handleSelectChange = (selectedProduct: string | null) => {
   setSelectedOption(selectedProduct);
 };
@@ -168,8 +179,8 @@ Sidebar:
 ```js
 import { useState } from 'react';
 import { Sidebar, Button } from '@iftakhar/ui';
-const [collapsedSidebar, setCollapsedSidebar] = useState < boolean > false;
-const [toggleSidebar, setToggleSidebar] = useState < boolean > false;
+const [collapsedSidebar, setCollapsedSidebar] = useState<boolean>(false);
+const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
 
 <Sidebar className='mt-20' breakPoint='md' collapsed={collapsedSidebar} toggled={toggleSidebar} onToggle={(toggle) => setToggleSidebar(toggle)}>
   <Sidebar.Header className='py-2 flex justify-center'>
@@ -197,7 +208,7 @@ Pagination
 ```js
 import { useState } from 'react';
 import { Pagination } from '@iftakhar/ui';
-const [page, setPage] = useState < number > 1;
+const [page, setPage] = useState <number>(1);
 const handlePageChange = (value: number) => {
   setPage(value);
 };
