@@ -21,26 +21,20 @@ interface SidebarState {
 export declare const SidebarContext: React.Context<SidebarState>;
 export declare const Sidebar: {
     ({ children, className, width, collapsedWidth, collapsed, rtl, toggled, bgImage, breakPoint, onToggle, style, ref, ...rest }: ProSidebarProps): React.JSX.Element;
-    Menu: React.FC<React.HTMLAttributes<HTMLElement> & {
-        className?: string | undefined;
-        children?: React.ReactNode;
+    Menu: React.FC<React.ClassAttributes<HTMLElement> & React.HTMLAttributes<HTMLElement> & {
         iconShape?: ("circle" | "round" | "square") | undefined;
         popperArrow?: boolean | undefined;
         subMenuBullets?: boolean | undefined;
         innerSubMenuArrows?: boolean | undefined;
-        ref?: React.RefObject<HTMLDivElement> | undefined;
     }>;
     MenuItem: React.FC<{
-        children: React.ReactNode;
-        className?: string | undefined;
         icon?: React.ReactNode;
         active?: boolean | undefined;
         prefix?: React.ReactNode;
         suffix?: React.ReactNode;
         firstchild?: number | undefined;
         popperarrow?: number | undefined;
-        ref?: React.RefObject<HTMLLIElement> | undefined;
-    }>;
+    } & React.ClassAttributes<HTMLLIElement> & React.LiHTMLAttributes<HTMLLIElement>>;
     SubMenu: React.FC<{
         children: React.ReactNode;
         className?: string | undefined;
@@ -60,15 +54,7 @@ export declare const Sidebar: {
         className?: string | undefined;
         ref?: React.RefObject<HTMLDivElement> | undefined;
     }>;
-    Header: React.FC<{
-        children: React.ReactNode;
-        className?: string | undefined;
-        ref?: React.RefObject<HTMLDivElement> | undefined;
-    }>;
-    Footer: React.FC<{
-        children: React.ReactNode;
-        className?: string | undefined;
-        ref?: React.RefObject<HTMLDivElement> | undefined;
-    }>;
+    Header: React.FC<React.ClassAttributes<HTMLElement> & React.HTMLAttributes<HTMLElement>>;
+    Footer: React.FC<React.ClassAttributes<HTMLElement> & React.HTMLAttributes<HTMLElement>>;
 };
 export {};

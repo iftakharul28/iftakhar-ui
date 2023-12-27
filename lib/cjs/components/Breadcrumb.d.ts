@@ -1,12 +1,7 @@
 import React from 'react';
-interface BreadcrumbProps {
-    children: React.ReactNode;
-    className?: string;
-    separator?: React.ReactNode;
-}
-export declare const BreadcrumbItem: (props: BreadcrumbProps) => React.JSX.Element;
+import type { BreadcrumbItemProps, BreadcrumbProps } from '../model/breadcrumb';
+export declare const BreadcrumbItem: ({ className, separator, children, ...rest }: BreadcrumbProps) => React.JSX.Element;
 export declare const Breadcrumb: {
-    (props: BreadcrumbProps): React.JSX.Element;
-    Item: (props: BreadcrumbProps) => React.JSX.Element;
+    ({ className, separator, children, ...rest }: BreadcrumbItemProps): React.JSX.Element;
+    Item: ({ className, separator, children, ...rest }: BreadcrumbProps) => React.JSX.Element;
 };
-export {};

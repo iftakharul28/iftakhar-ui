@@ -1,13 +1,10 @@
 import React from 'react';
 type IconShape = 'square' | 'round' | 'circle';
-type MenuProps = React.HTMLAttributes<HTMLElement> & {
-    className?: string;
-    children?: React.ReactNode;
+type MenuProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
     iconShape?: IconShape;
     popperArrow?: boolean;
     subMenuBullets?: boolean;
     innerSubMenuArrows?: boolean;
-    ref?: React.RefObject<HTMLDivElement>;
 };
 export declare const Menu: React.FC<MenuProps>;
 export {};

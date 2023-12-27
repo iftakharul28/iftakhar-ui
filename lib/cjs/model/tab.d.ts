@@ -1,21 +1,14 @@
-export interface Props {
-    children: React.ReactNode;
-    className?: string;
-}
-export interface TabsProps extends Props {
+type Props = {
     defaultValue?: string;
-}
-export interface TabsListProps extends Props {
     ariaLabel: string;
-}
-export interface TabsTriggerProps extends Props {
     activeClass?: string;
     value: string;
-}
-export interface TabsContentProps extends Props {
-    value: string;
-}
-export interface TabsContextType {
     activeTab: string;
     setActiveTab: React.Dispatch<React.SetStateAction<string>>;
-}
+};
+export type TabsProps = Omit<Props, 'ariaLabel' | 'activeClass' | 'value' | 'activeTab' | 'setActiveTab'> & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+export type TabsListProps = Omit<Props, 'defaultValue' | 'activeClass' | 'value' | 'activeTab' | 'setActiveTab'> & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+export type TabsTriggerProps = Omit<Props, 'defaultValue' | 'ariaLabel' | 'activeTab' | 'setActiveTab'> & React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
+export type TabsContentProps = Omit<Props, 'defaultValue' | 'activeClass' | 'ariaLabel' | 'activeTab' | 'setActiveTab'> & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+export type TabsContextType = Omit<Props, 'defaultValue' | 'activeClass' | 'ariaLabel' | 'value'>;
+export {};

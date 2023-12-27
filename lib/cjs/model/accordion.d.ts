@@ -1,21 +1,14 @@
-export interface AccordionProps {
-    children: React.ReactNode;
-    className?: string;
+type Props = {
     defaultValue?: string;
-}
-export interface AccordionItemProps extends AccordionProps {
     activeClass?: string;
     value: string;
-}
-export interface AccordionTriggerProps extends AccordionProps {
-    value: string;
-    activeClass?: string;
-}
-export interface AccordionContentProps extends AccordionProps {
-    value: string;
-    activeClass?: string;
-}
-export interface AccordionContextType {
     activeTab: string;
+    icon?: React.ReactNode;
     setActiveTab: React.Dispatch<React.SetStateAction<string>>;
-}
+};
+export type AccordionProps = Omit<Props, 'activeClass' | 'value' | 'activeTab' | 'setActiveTab' | 'icon'> & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+export type AccordionItemProps = Omit<Props, 'defaultValue' | 'activeTab' | 'setActiveTab' | 'icon'> & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+export type AccordionTriggerProps = Omit<Props, 'defaultValue' | 'activeTab' | 'setActiveTab'> & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+export type AccordionContentProps = Omit<Props, 'defaultValue' | 'activeTab' | 'setActiveTab' | 'icon'> & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+export type AccordionContextType = Omit<Props, 'defaultValue' | 'activeClass' | 'value' | 'icon'>;
+export {};

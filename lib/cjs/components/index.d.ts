@@ -4,7 +4,7 @@ export * from './Button';
 export * from './Condition';
 export * from './Input';
 export * from './List';
-export * from './Model';
+export * from './Modal';
 export * from './Select';
 export * from './Sidebar';
 export * from './Pagination';

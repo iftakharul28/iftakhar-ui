@@ -1,8 +1,4 @@
-import React, { ReactNode, RefObject } from 'react';
-type FooterProps = {
-    children: ReactNode;
-    className?: string;
-    ref?: RefObject<HTMLDivElement>;
-};
+import React from 'react';
+type FooterProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
 export declare const Footer: React.FC<FooterProps>;
 export {};

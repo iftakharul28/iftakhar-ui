@@ -37,6 +37,7 @@ Accordion:
 
 ```js
 import { Accordion } from '@iftakhar/ui';
+
 <Accordion defaultValue='item-1' className='max-w-[500px] w-full mx-auto p-10'>
   <Accordion.Item className='cursor-pointer' value='item-1'>
     <Accordion.Trigger value='item-1' activeClass='border-b-0' className='border-b py-4 	font-semibold w-full flex items-center justify-between'>
@@ -50,13 +51,14 @@ import { Accordion } from '@iftakhar/ui';
     </Accordion.Trigger>
     <Accordion.Content value='item-2'>Yes. It comes with default styles that matches the other</Accordion.Content>
   </Accordion.Item>
-</Accordion>;
+</Accordion>
 ```
 
 Button:
 
 ```js
 import { Button } from  '@iftakhar/ui';
+
 <Button className='text-red-400' type='link' href="/home">
 	Go Home
 </Button>
@@ -69,6 +71,7 @@ Breadcrumb:
 
 ```js
 import { Breadcrumb } from '@iftakhar/ui';
+
 <Breadcrumb separator={'/'}>
   <Breadcrumb.Item>home</Breadcrumb.Item>
   <Breadcrumb.Item>product</Breadcrumb.Item>
@@ -80,6 +83,7 @@ Condition:
 
 ```js
 import { Switch } from '@iftakhar/ui';
+
 <Switch>
   <Switch.Case condition={true}>
     <span>If this condition is true, then it will show</span>
@@ -97,6 +101,7 @@ Input:
 
 ```js
 import { Label, Input, TextArea } from  '@iftakhar/ui';
+
 <Label htmlFor="password" className='auth-input-label'>
 	Password
 </Label>
@@ -127,6 +132,7 @@ const data = [
     </div>
   )}
 />;
+
 ```
 
 Model:
@@ -135,15 +141,30 @@ Model:
 import { useState } from 'react';
 import { Modal } from '@iftakhar/ui';
 const [isActive, setActive] = useState<boolean>(false);
+
 <Modal
-  title={'Modal'}
-  visible={isActive}
-  maskClosable={false}
-  okButton={{ onClick: () => setActive(!isActive), type: 'button', className: '', children: 'OK' }}
-  cancelButton={{ onClick: () => setActive(!isActive), type: 'button', className: '', children: 'Close' }}
-  className='!max-w-xl mx-auto !top-40'>
-  <p>Modal dialogs.</p>
-</Modal>;
+cancelButton={{
+  onClick: () => setActive(!isActive),
+}}
+maskClosable={true}
+visible={isActive}>
+<Modal.Content
+  className='!bg-red-400'
+  okButton={{
+    onClick: () => setActive(!isActive),
+    type: 'button',
+    className: ' ml-6',
+    children: 'OK',
+  }}
+  cancelButton={{
+    onClick: () => setActive(!isActive),
+    type: 'button',
+    className: '',
+    children: 'Cancel',
+  }}>
+  <div>hello</div>
+</Modal.Content>
+</Modal>
 ```
 
 MediaQuery:
@@ -162,7 +183,7 @@ Select:
 ```js
 import { useState } from 'react';
 import { Select } from '@iftakhar/ui';
-const [selectedOption, setSelectedOption] = useState <string | null>(null);
+const [selectedOption, setSelectedOption] = useState<string | null>(null);
 const handleSelectChange = (selectedProduct: string | null) => {
   setSelectedOption(selectedProduct);
 };
@@ -178,7 +199,7 @@ Sidebar:
 
 ```js
 import { useState } from 'react';
-import { Sidebar, Button } from '@iftakhar/ui';
+import { Sidebar, Button, clsx } from '@iftakhar/ui';
 const [collapsedSidebar, setCollapsedSidebar] = useState<boolean>(false);
 const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
 
@@ -196,7 +217,7 @@ const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
     </Sidebar.Menu>
   </Sidebar.Content>
   <Sidebar.Footer className=' flex justify-center py-2'>
-    <Button type='button' onClick={() => setCollapsedSidebar(!collapsedSidebar)} className={Clsx('h-10 w-10 text-xl center-inner hover:text-primary hover:text-2xl duration-300')}>
+    <Button type='button' onClick={() => setCollapsedSidebar(!collapsedSidebar)} className={clsx('h-10 w-10 text-xl center-inner hover:text-primary hover:text-2xl duration-300')}>
       <ArrowDown className=' rotate-90' />
     </Button>
   </Sidebar.Footer>
@@ -212,63 +233,76 @@ const [page, setPage] = useState <number>(1);
 const handlePageChange = (value: number) => {
   setPage(value);
 };
-<Pagination current={page} pageSize={20} total={30} onChange={handlePageChange} />;
+<Pagination
+  next={{
+    icon: '>>',
+    className: 'border border-red-300 rounded cursor-pointer',
+  }}
+  prev={{
+    icon: '<<',
+    className: 'border border-red-300 rounded cursor-pointer',
+  }}
+  current={page}
+  pageSize={20}
+  total={50}
+  onChange={handlePageChange}
+/>;
 ```
 
 Tab
 
 ```js
 import { Tabs, label, Input } from '@iftakhar/ui';
-<Tabs className='w-[500px] mx-auto' defaultValue='item-1'>
-  <Tabs.List className='h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground grid w-full grid-cols-2' ariaLabel='Manage your account'>
-    <Tabs.Trigger
-      className='whitespace-nowrap rounded-sm px-3 py-1.5 text-lg font-medium transition-all focus-visible:outline-none focus-visible:ring-2'
-      activeClass='bg-slate-700 text-white'
-      value='item-1'>
-      Account
-    </Tabs.Trigger>
-    <Tabs.Trigger
-      className='whitespace-nowrap rounded-sm px-3 py-1.5 text-lg font-medium transition-all focus-visible:outline-none focus-visible:ring-2'
-      activeClass='bg-slate-700 text-white'
-      value='item-2'>
+<Tab className='w-[500px] mx-auto' defaultValue='item-1'>
+<Tab.List className='h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground grid w-full grid-cols-2' ariaLabel='Manage your account'>
+  <Tab.Trigger
+    className='whitespace-nowrap rounded-sm px-3 py-1.5 text-lg font-medium transition-all focus-visible:outline-none focus-visible:ring-2'
+    activeClass='bg-slate-700 text-white'
+    value='item-1'>
+    Account
+  </Tab.Trigger>
+  <Tab.Trigger
+    className='whitespace-nowrap rounded-sm px-3 py-1.5 text-lg font-medium transition-all focus-visible:outline-none focus-visible:ring-2'
+    activeClass='bg-slate-700 text-white'
+    value='item-2'>
+    Password
+  </Tab.Trigger>
+</Tab.List>
+<Tab.Content className='mt-3 rounded border border-gray-400 px-4 py-3 space-y-2' value='item-1'>
+  <div>
+    <label htmlFor='loginName' className='auth-input-label'>
+      Name
+    </label>
+    <Input type='email' id='loginName' placeholder='Name' className='h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none' name='name' />
+  </div>
+  <div>
+    <label htmlFor='loginEmail' className='auth-input-label'>
+      Email
+    </label>
+    <Input type='email' id='loginEmail' placeholder='Email address' className='h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none' name='email' />
+  </div>
+  <div>
+    <label htmlFor='loginPassword' className='auth-input-label'>
       Password
-    </Tabs.Trigger>
-  </Tabs.List>
-  <Tabs.Content className='mt-3 rounded border border-gray-400 px-4 py-3 space-y-2' value='item-1'>
-    <div>
-      <label htmlFor='loginName' className='auth-input-label'>
-        Name
-      </label>
-      <Input type='email' id='loginName' placeholder='Name' className='h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none' name='name' />
-    </div>
-    <div>
-      <label htmlFor='loginEmail' className='auth-input-label'>
-        Email
-      </label>
-      <Input type='email' id='loginEmail' placeholder='Email address' className='h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none' name='email' />
-    </div>
-    <div>
-      <label htmlFor='loginPassword' className='auth-input-label'>
-        Password
-      </label>
-      <Input type='password' id='loginPassword' placeholder='Password' className='h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none' name='password' />
-    </div>
-  </Tabs.Content>
-  <Tabs.Content className='mt-3 rounded border border-gray-400 px-4 py-3 space-y-2' value='item-2'>
-    <div>
-      <label htmlFor='loginEmail' className='auth-input-label'>
-        Email
-      </label>
-      <Input type='email' id='loginEmail' placeholder='Email address' className='h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none' name='email' />
-    </div>
-    <div>
-      <label htmlFor='loginPassword' className='auth-input-label'>
-        Password
-      </label>
-      <Input type='password' id='loginPassword' placeholder='Password' className='h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none' name='password' />
-    </div>
-  </Tabs.Content>
-</Tabs>;
+    </label>
+    <Input type='password' id='loginPassword' placeholder='Password' className='h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none' name='password' />
+  </div>
+</Tab.Content>
+<Tab.Content className='mt-3 rounded border border-gray-400 px-4 py-3 space-y-2' value='item-2'>
+  <div>
+    <label htmlFor='loginEmail' className='auth-input-label'>
+      Email
+    </label>
+    <Input type='email' id='loginEmail' placeholder='Email address' className='h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none' name='email' />
+  </div>
+  <div>
+    <label htmlFor='loginPassword' className='auth-input-label'>
+      Password
+    </label>
+    <Input type='password' id='loginPassword' placeholder='Password' className='h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none' name='password' />
+  </div>
+</Tab.Content>
+</Tab>
 ```
 
 Table

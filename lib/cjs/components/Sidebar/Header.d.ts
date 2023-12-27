@@ -1,8 +1,4 @@
-import React, { ReactNode, RefObject } from 'react';
-type HeaderProps = {
-    children: ReactNode;
-    className?: string;
-    ref?: RefObject<HTMLDivElement>;
-};
+import React from 'react';
+type HeaderProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
 export declare const Header: React.FC<HeaderProps>;
 export {};

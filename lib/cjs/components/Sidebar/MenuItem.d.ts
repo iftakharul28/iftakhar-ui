@@ -1,14 +1,11 @@
-import React, { ReactNode, RefObject } from 'react';
+import React from 'react';
 type MenuItemProps = {
-    children: ReactNode;
-    className?: string;
-    icon?: ReactNode;
+    icon?: React.ReactNode;
     active?: boolean;
-    prefix?: ReactNode;
-    suffix?: ReactNode;
+    prefix?: React.ReactNode;
+    suffix?: React.ReactNode;
     firstchild?: number;
     popperarrow?: number;
-    ref?: RefObject<HTMLLIElement>;
-};
+} & React.DetailedHTMLProps<React.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>;
 export declare const MenuItem: React.FC<MenuItemProps>;
 export {};
