@@ -15,6 +15,7 @@ yarn add @iftakhar/ui
 - Accordion
 - Button
 - Breadcrumb
+- Card
 - Condition
 - Input
 - List
@@ -78,7 +79,22 @@ import { Breadcrumb } from '@iftakhar/ui';
   <Breadcrumb.Item>iphone-14-pro</Breadcrumb.Item>
 </Breadcrumb>;
 ```
+Card
 
+```js
+import { Breadcrumb } from '@iftakhar/ui';
+
+<Card title='Card title' extra={<button type='button'>click me</button>} footer={
+  <div>Card footer</div>}>
+<p>Apple Watch Ultra 2 with Alpine Loop GPS + Cellular</p>
+<p>
+  The Apple Watch Ultra 2 with Alpine Loop GPS + Cellular embodies innovation and style with its solid Titanium build. Its Alpine loop design not only lends a sporty aesthetic but also ensures
+  durability, marrying style with ruggedness. With cellular connectivity, you're always connected on the go. Plus, it excels in precise health and workout monitoring, delivering real-time
+  insights. The watch boasts a long-lasting battery, ensuring uninterrupted service for all your needs. It's a blend of elegance, performance, and resilience, making it an ideal companion for
+  modern lifestyles.
+</p>
+</Card>
+```
 Condition:
 
 ```js

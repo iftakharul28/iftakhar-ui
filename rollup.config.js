@@ -4,20 +4,11 @@ const commonjs = require('@rollup/plugin-commonjs');
 const typescript = require('rollup-plugin-typescript2');
 const postcss = require('rollup-plugin-postcss');
 const packageJson = require('./package.json');
-
 export default {
-  input: 'src/index.ts',
+  input: 'src/main.ts',
   output: [
-    {
-      file: packageJson.main,
-      format: 'cjs',
-      sourcemap: true,
-    },
-    {
-      file: packageJson.module,
-      format: 'esm',
-      sourcemap: true,
-    },
+    { file: packageJson.main, format: 'cjs', sourcemap: false },
+    { file: packageJson.module, format: 'esm', sourcemap: false },
   ],
   plugins: [
     terser(),
@@ -30,5 +21,5 @@ export default {
       minimize: true, // Minimize the CSS output
     }),
   ],
-  external: ['react', 'react-dom'], // Add other dependencies here
+  external: ['react', 'react-dom'],
 };
