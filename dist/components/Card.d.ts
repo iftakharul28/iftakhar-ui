@@ -6,5 +6,5 @@ type Props = {
     header?: React.ReactNode;
     footer?: React.ReactNode;
 } & OmitTitle<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>>;
-export default function Card({ title, extra, header, footer, className, children, ...rest }: Props): React.JSX.Element;
+export declare function Card({ title, extra, header, footer, className, children, ...rest }: Props): React.JSX.Element;
 export {};

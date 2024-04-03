@@ -82,10 +82,10 @@ import { Breadcrumb } from '@iftakhar/ui';
 Card
 
 ```js
-import { Breadcrumb } from '@iftakhar/ui';
+import { Card } from '@iftakhar/ui';
 
-<Card title='Card title' extra={<button type='button'>click me</button>} footer={
-  <div>Card footer</div>}>
+<Card title='Card title' extra={<button type='button'>click me</button>} 
+footer={<div>Card footer</div>}>
 <p>Apple Watch Ultra 2 with Alpine Loop GPS + Cellular</p>
 <p>
   The Apple Watch Ultra 2 with Alpine Loop GPS + Cellular embodies innovation and style with its solid Titanium build. Its Alpine loop design not only lends a sporty aesthetic but also ensures
@@ -186,6 +186,8 @@ visible={isActive}>
 MediaQuery:
 
 ```js
+import { MediaQuery } from '@iftakhar/ui';
+
 <MediaQuery query='(min-width: 1024px)'>
   <pre>min-width: 1024px</pre> {/* if screen width is bigger than 1024px then it will be shown */}
 </MediaQuery>
@@ -268,9 +270,9 @@ const handlePageChange = (value: number) => {
 Tab
 
 ```js
-import { Tabs, label, Input } from '@iftakhar/ui';
+import { Tab, Input } from '@iftakhar/ui';
 <Tab className='w-[500px] mx-auto' defaultValue='item-1'>
-<Tab.List className='h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground grid w-full grid-cols-2' ariaLabel='Manage your account'>
+<Tab.List className='h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground grid w-full grid-cols-2'>
   <Tab.Trigger
     className='whitespace-nowrap rounded-sm px-3 py-1.5 text-lg font-medium transition-all focus-visible:outline-none focus-visible:ring-2'
     activeClass='bg-slate-700 text-white'

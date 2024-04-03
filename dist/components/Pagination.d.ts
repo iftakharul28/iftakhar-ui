@@ -1,18 +1,20 @@
 import React from 'react';
-type buttonType = {
-    icon?: React.ReactNode;
-} & React.DetailedHTMLProps<React.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>;
-interface PaginationProps {
+type buttonType = React.DetailedHTMLProps<React.LiHTMLAttributes<HTMLLIElement>, HTMLLIElement>;
+type listType = {
+    className?: string;
+    activeClassName?: string;
+};
+type PaginationProps = {
     current: number;
     pageSize: number;
     total: number;
-    onChange: (page: number) => void;
     pageRange?: number;
-    activeClass?: string;
+    onChange: (page: number) => void;
     className?: string;
     onlyNumber?: boolean;
+    item?: listType;
     next?: buttonType;
     prev?: buttonType;
-}
-export declare const Pagination: ({ current, pageSize, total, onChange, pageRange, activeClass, className, prev, next, onlyNumber }: PaginationProps) => React.JSX.Element;
+};
+export declare const Pagination: ({ current, pageSize, total, onChange, pageRange, item, className, prev, next, onlyNumber }: PaginationProps) => React.JSX.Element;
 export {};
