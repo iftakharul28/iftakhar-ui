@@ -1,4 +1,16 @@
 # @iftakhar/ui
+<div align="center">
+
+  ![GitHub repo size](https://img.shields.io/github/repo-size/iftakharul28/iftakhar-ui)
+  ![NPM Version](https://img.shields.io/npm/v/@iftakhar/ui)
+  ![NPM Downloads](https://img.shields.io/npm/d18m/@iftakhar/ui)
+  ![npm bundle size](https://img.shields.io/bundlephobia/min/%40iftakhar%2Fui)
+
+  <br />
+  <h2 align="center">Build your component library</h2>
+ Beautifully designed components that you can copy and paste into your apps.<br /> Accessible. Customizable. Open Source. Get Started GitHub
+</div>
+<br />
 
 ## Install
 

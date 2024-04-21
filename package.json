@@ -5,9 +5,9 @@
   "main": "dist/main.cjs.js",
   "types": "dist/main.d.ts",
   "module": "dist/main.esm.js",
-  "author": "Iftakharul Alam  <iftakharul28@gmail.com> (https://iftakharul-alam.vercel.app)",
+  "author": "Iftakharul Alam  <iftakharul28@gmail.com> (https://iftakharulalam.com)",
   "license": "MIT",
-  "homepage": "https://github.com/iftakharul28/iftakhar-ui#readme",
+  "homepage": "https://iftakhar-ui-doc.vercel.app/",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs"
   },
