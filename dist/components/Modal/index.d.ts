@@ -6,7 +6,7 @@ type Props = {
     cancelButton?: React.ButtonHTMLAttributes<HTMLButtonElement>;
 } & React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 export declare const Modal: {
-    (props: Props): React.ReactPortal | null | undefined;
+    (props: Props): any;
     Content: typeof Content;
 };
 export {};

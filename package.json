@@ -1,13 +1,13 @@
 {
   "name": "@iftakhar/ui",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "react component package",
   "main": "dist/main.cjs.js",
   "types": "dist/main.d.ts",
   "module": "dist/main.esm.js",
   "author": "Iftakharul Alam  <iftakharul28@gmail.com> (https://iftakharulalam.com)",
   "license": "MIT",
-  "homepage": "https://iftakhar-ui-doc.vercel.app/",
+  "homepage": "https://iftakhar-ui-doc.vercel.app",
   "scripts": {
     "build": "rollup -c --bundleConfigAsCjs"
   },
@@ -27,22 +27,21 @@
     "url": "git+https://github.com/iftakharul28/iftakhar-ui.git"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^25.0.4",
-    "@rollup/plugin-node-resolve": "^15.2.1",
-    "@rollup/plugin-terser": "^0.4.3",
-    "@types/react": "^18.2.21",
-    "@types/react-dom": "^18.2.7",
-    "postcss": "^8.4.29",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rollup": "^3.28.1",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@types/node": "^20.12.7",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "postcss": "^8.4.38",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "rollup": "^4.16.4",
     "rollup-plugin-postcss": "^4.0.2",
-    "rollup-plugin-typescript2": "^0.35.0",
-    "style-loader": "^3.3.3",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "style-loader": "^4.0.0",
     "tsc-hooks": "^1.1.2",
-    "typescript": "^5.2.2"
+    "typescript": "^5.4.5"
   },
   "peerDependencies": {
     "react": "18.2.0",

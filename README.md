@@ -75,6 +75,7 @@ import { Button } from  '@iftakhar/ui';
 <Button className='text-red-400' type='link' href="/home">
 	Go Home
 </Button>
+
 <Button className='text-red-400' type='button' onClick={() =>  console.log("hi")}>
 	Click Here
 </Button>
